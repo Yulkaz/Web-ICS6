@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Bootstrap</title>
+ 	<link href="http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+ 	<style>
+ 		.purple
+ 		{ 
+ 			color:purple; 
+ 			font-weight: bold;
+ 		}
+ 		html 
+ 		{
+ 			position: relative;
+ 			min-height: 100%;
+ 		}
+ 		body { margin-bottom: 40px; }
+ 		main { margin-top: 15px; }
+ 		footer
+ 		{
+ 			height: 40px;
+ 			position: absolute;
+ 			bottom: 0;
+ 			width: 100%;
+ 		}
+ 		.my-primary 
+ 		{
+ 			background-color:purple;
+ 			color: white;
+ 		}
+ 	</style>
+</head>
+<body>
+ 	<header>
+ 		<nav class="navbar navbar-expand-lg navbar-dark my-primary">
+ 			<a class="navbar-brand" href="#">Navbar</a>
+ 			<ul class="navbar-nav mr-auto">
+ 				<li class="nav-item active">
+ 					<a class="nav-link" href="#">Home
+ 						<span class="sr-only">(current)</span>
+ 					</a>
+ 				</li>
+ 				<li class="nav-item">
+ 					<a class="nav-link" href="#">Link</a>
+ 				</li>
+ 			</ul>
+ 		</nav>
+ 	</header>
+ 	<main class="container">
+ 		<div class="row">
+ 			<div class="col-4">
+ 				<img src=" http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/mod_folder/content/0/avatar.jpg" alt="avatar" width="150" height="150">
+ 			</div>
+ 			<div class="col-8">
+ 				<p>"Если ты уже в яме, хватит копать."<br />
+ 					<span class="purple">Уилл Роджерс</span></p>
+ 			</div>
+ 		</div>
+		<div class="row">
+ 			<div class="col-8">
+ 				<h2>Заявка</h2>
+	<form class="form" >
+		<table>
+			<tr>
+				<th>Имя:</th>
+				<th colspan="2"><input type="text" name="fname" required/></th>
+			</tr>
+			<tr>
+				<th>Фамилия:</th>
+				<th colspan="2"><input type="text" name="lname" required/></th>
+			</tr>
+			<tr>
+				<th>Отчество:</th>
+				<th colspan="2"><input type="text" name="pname" /></th>
+			</tr>
+			<tr>
+				<th>Пол:</th>
+				<th><input type="radio" name="gender" value="м"/>м</th>
+				<th><input type="radio" name="gender" value="ж"/>ж</th>
+			</tr>
+			<tr>
+				<th>Почтовый адрес:</th>
+				<th colspan="2"><input type="text" name="post" /></th>
+			</tr>
+			<tr>
+				<th colspan="3"><input type="submit" value="Отправить" /></th>
+			</tr>
+		</table>
+	</form>
+ 			</div>
+ 			<div class="col-4">
+				<h2> Расписание на СР </h2>
+				<table class="table table-bordered"> 
+					<tr>
+							<th>08:30-10:05</th>
+							<th>(сем) Физика 323</th>
+							<th></th>
+					</tr>  
+					<tr>
+							<th>10:15-11:50</th>
+							<th>(сем) Языки интернет-программирования 427ю</th>
+							<th>(лаб) Базы данных кк501</th>
+					</tr> 
+					<tr>
+							<th>12:00-13:35</th>
+							<th></th>
+							<th>(лаб) Физика <em>Каф</em></th>
+					</tr>   
+					<tr>
+							<th>13:50-15:25</th>
+							<th></th>
+							<th>(лаб) Физика <em>Каф</em></th>
+					</tr>     
+					<tr>
+							<th>15:40-17:15</th>
+							<th colspan="2"> (лек) Правоведение 218л</th>
+					</tr> 
+				</table>
+ 			</div>
+ 		</div>
+ 		<div class="row">
+ 			<div class="col">
+ 				<pre>
+					Lorem ipsum dolor sit <strong>amet, consectetur adipiscing elit,</strong> 
+					sed do eiusmod <span class="mark">tempor incididunt ut labore et dolore magna aliqua.</span> 	 
+				</pre>
+ 			</div>
+ 		</div>
+ 	</main>
+ 	<footer class="my-primary">
+ 		<div class="container">
+ 			<p class="footer-text">Footer</p>
+ 		</div>
+ 	</footer>
+</body>
+</html>

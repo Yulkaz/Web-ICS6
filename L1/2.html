@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8"/>
+	<title> Рыба-текст  </title>
+</head>
+
+<body>
+	<h1> Рыба-текст </h1>
+	<pre>
+Lorem ipsum dolor sit <strong>amet</strong>, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim<mark> <strong>veniam</strong>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat <em>non proident</em></mark>, sunt in culpa qui officia deserunt mollit anim <em>id est laborum</em>.
+	</pre>
+	<h2>Теорема косинусов</h2>
+a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2 * b * c * cos&#8736;(b,c)
+	<h2>Код функции lstmap</h2>
+	<pre>
+	<code>
+		/* ************************************************************************** */
+		/*                                                                            */
+		/*                                                        :::      ::::::::   */
+		/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+		/*                                                    +:+ +:+         +:+     */
+		/*   By: aconcept marvin@42.fr                    +#+  +:+       +#+        */
+		/*                                                +#+#+#+#+#+   +#+           */
+		/*   Created: 2020/11/18 21:46:42 by aconcept          #+#    #+#             */
+		/*   Updated: 2020/11/18 21:48:59 by aconcept         ###   ########.fr       */
+		/*                                                                            */
+		/* ************************************************************************** */
+				
+		#include "libft.h"
+		#include "stdlib.h"
+			
+		t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+		{
+			t_list	*start;
+			t_list	*cur;
+				
+			start = NULL;
+			if (!lst)
+				return (NULL);
+			while (lst != NULL)
+			{
+				cur = ft_lstnew(f(lst->content));
+				if (cur == NULL)
+				{
+					ft_lstclear(&start, del);
+					return (NULL);
+				}
+				ft_lstadd_back(&start, cur);
+				lst = lst->next;
+			}
+			return (start);
+		}
+	</code>
+	</pre>
+</body>
+</html>
